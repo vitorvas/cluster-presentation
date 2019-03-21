@@ -35,7 +35,7 @@
 \usepackage{pdflscape}          % Para rotacionar o código fonte
 \usepackage{pdfpages}           % Complemento do anterior
 
-\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygreen}{rgb}{0,0.8,0}
 
 % Configura o listings
 \lstset{
@@ -71,20 +71,21 @@
 %% Tennessee Orange and LTHNred Gray
 %\definecolor{LTHNblack}{RGB}{35, 31, 32} % Cor original
 \definecolor{LTHNblack}{RGB}{0, 0, 0}
-\definecolor{LTHNred}{RGB}{0, 0, 255}
+\definecolor{LTHNred}{RGB}{255, 0, 0}
+\definecolor{LTHNdarkgreen}{RGB}{0,71,49}
 
-\setbeamercolor{frametitle}{fg = LTHNblack}
-\setbeamercolor{title}{fg = LTHNblack}
+\setbeamercolor{frametitle}{fg = LTHNdarkgreen}
+\setbeamercolor{title}{fg = LTHNdarkgreen}
 
 % In case you choose to display the Table of Contents, or the Outline slide.
-\setbeamercolor{section in toc}{fg = LTHNred}
+\setbeamercolor{section in toc}{fg = LTHNdarkgreen}
 \setbeamercolor{section in toc shaded}{fg = LTHNblack}
 
 % The colour of all the items, subitems and and subsubitems
-\setbeamercolor{item}{fg = LTHNred}
+\setbeamercolor{item}{fg = LTHNblack}
 \setbeamercolor{subitem}{fg = LTHNblack}
-\setbeamercolor{subsubitem}{fg = LTHNred}
-\setbeamercolor{normal text}{fg = LTHNred}
+\setbeamercolor{subsubitem}{fg = LTHNblack}
+\setbeamercolor{normal text}{fg = LTHNblack}
 
 \setbeamercolor{postit}{fg=white,bg=LTHNblack}
 \setbeamercolor{postthat}{fg=LTHNblack,bg=LTHNblack}
@@ -95,7 +96,7 @@
 
 \setbeamertemplate{title page}{
 \begin{center}\vspace{0.5\baselineskip}
-{\Large \textcolor{LTHNblack}{\inserttitle}}
+{\Large \textcolor{LTHNdarkgreen}{\inserttitle}}
 
 \insertsubtitle
 

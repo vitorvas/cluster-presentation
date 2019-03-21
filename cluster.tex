@@ -43,7 +43,7 @@
 %-------------------------------------------------
 \begin{frame}
   \frametitle{Sumário}
-  \tableofcontents%[pausesections]
+  \tableofcontents[pausesections]
 \end{frame}
 
 
@@ -60,7 +60,9 @@
 \begin{frame}[noframenumbering]
   \frametitle{O cluster}
   \framesubtitle{Visão esquemática}
-  \includegraphics[scale=0.58]{figuras/cluster-topologico.png}
+  \begin{center}
+    \includegraphics[scale=0.5]{figuras/cluster-topologico.png}
+  \end{center}
 %  \begin{tikzpicture}[remember picture,overlay]
 %    \node[anchor=center, inner sep=0] (img1) at (0,0) {\includegraphics[scale=0.2]{figuras/duas.jpg}};
 %    \begin{scope}[
@@ -71,6 +73,80 @@
 %    \end{scope}
 %  \end{tikzpicture}
 \end{frame}
+
+%-------------------------------------------------
+\begin{frame}
+  \frametitle{Gluster: o que é?}
+  \framesubtitle{Sistema de arquivos distribuído \textbf{GlusterFS}}
+
+\textbullet  \textit{Free and open source software}:\\% exatamente! Gratuito e de código aberto (não que pensemos em modificá-lo...)\\
+\textbullet  Nativo para \textit{CentOS}: instalação e atualizações fornecidas via repositório e compatibilidade garantida.\\
+\textbullet  Modelo cliente servidor;\\
+  \vspace{0.2cm}
+  (Algumas) Funcionalidades:
+
+  \begin{enumerate}
+  \item Espelhamento
+  \item Replicação
+  \item \textit{Striping}
+  \item Tolerância a falhas
+  \item Cotas
+  \end{enumerate}
+
+\end{frame}
+
+
+%-------------------------------------------------
+\begin{frame}
+  \frametitle{Gluster: o que é?}
+  \framesubtitle{Sistema de arquivos distribuído}
+    \begin{center}
+      \includegraphics[scale=0.65]{figuras/gluster.png}
+    \end{center}
+\end{frame}
+
+%-------------------------------------------------
+\begin{frame}[fragile]
+  \frametitle{Gluster: o que é?}
+  \framesubtitle{Volumes na prática}
+  \begin{lstlisting}
+    gluster volume info
+    fdsafdsa
+    fdsafdsa
+    fdsafdsa
+  \end{lstlisting}
+\end{frame}
+
+\subsection{Visão Esquemática}
+%-------------------------------------------------
+\begin{frame}[noframenumbering]
+  \frametitle{O cluster}
+  \framesubtitle{Na prática, um grande ``disco'' de armazenamento}
+    \begin{center}
+      \includegraphics[scale=0.45]{figuras/cluster-gluster.png}
+        \end{center}
+\end{frame}
+
+\subsection{Visão Esquemática}
+%-------------------------------------------------
+\begin{frame}
+  \frametitle{O cluster}
+  \framesubtitle{Na rede do CDTN}
+  \begin{center}
+    \includegraphics[scale=0.45]{figuras/cluster-rede.png}
+  \end{center}
+  
+%  \begin{tikzpicture}[remember picture,overlay]
+%    \node[anchor=center, inner sep=0] (img1) at (0,0) {\includegraphics[scale=0.2]{figuras/duas.jpg}};
+%    \begin{scope}[
+%        x={(img1.south east)},
+%        y={(img1.north west)}
+%      ]
+%      \node [red, font=\bfseries] at (0.25,0.65) {$P(X|Y)$};
+%    \end{scope}
+%  \end{tikzpicture}
+\end{frame}
+
 
 \subsection{Características}
 %-------------------------------------------------
