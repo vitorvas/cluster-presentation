@@ -68,11 +68,15 @@
 % The new \br command creates a linebreak
 \newcommand{\br}{\vspace{\baselineskip}}
 
-%% Tennessee Orange and LTHNred Gray
-%\definecolor{LTHNblack}{RGB}{35, 31, 32} % Cor original
+%% As cores são minhas: LTHN, Vitor
+%\definecolor{LTHNblack}{RGB}{35, 31, 32} % Cor original (acinzentado, boa)
 \definecolor{LTHNblack}{RGB}{0, 0, 0}
 \definecolor{LTHNred}{RGB}{255, 0, 0}
 \definecolor{LTHNdarkgreen}{RGB}{0,71,49}
+
+% Cores para o footnote
+\setbeamercolor{footnote}{fg=LTHNdarkgreen}
+\setbeamercolor{footnote mark}{fg=LTHNdarkgreen}
 
 \setbeamercolor{frametitle}{fg = LTHNdarkgreen}
 \setbeamercolor{title}{fg = LTHNdarkgreen}
@@ -118,7 +122,7 @@
 }
 
 
-
+\addtobeamertemplate{footnote}{}{\vspace{3ex}}
 
 
 \defbeamertemplate*{footline}{}

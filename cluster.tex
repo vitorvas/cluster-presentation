@@ -51,13 +51,12 @@
 %-------------------------------------------------
 \begin{frame}
   \frametitle{O cluster}
-%  \framesubtitle{Como acoplar neutrônica e termo-hidráulica?}
   \includegraphics[scale=0.2]{figuras/duas.jpg}
 \end{frame}
 
 \subsection{Visão Esquemática}
 %-------------------------------------------------
-\begin{frame}[noframenumbering]
+\begin{frame}
   \frametitle{O cluster}
   \framesubtitle{Visão esquemática}
   \begin{center}
@@ -117,9 +116,8 @@
   \end{lstlisting}
 \end{frame}
 
-\subsection{Visão Esquemática}
 %-------------------------------------------------
-\begin{frame}[noframenumbering]
+\begin{frame}
   \frametitle{O cluster}
   \framesubtitle{Na prática, um grande ``disco'' de armazenamento}
     \begin{center}
@@ -127,7 +125,6 @@
         \end{center}
 \end{frame}
 
-\subsection{Visão Esquemática}
 %-------------------------------------------------
 \begin{frame}
   \frametitle{O cluster}
@@ -190,6 +187,12 @@
 \end{frame}
 %}
 
+\subsection{Ganglia}
+%-------------------------------------------------
+\begin{frame}
+  \frametitle{Sistema de Monitoramento}
+\end{frame}
+
 
 
 %-------------------------------------------------
@@ -227,34 +230,37 @@
  \end{lstlisting}
 \end{frame}
 
+
+\section{Utilização prática}
 %-------------------------------------------------
+\subsection{SLURM}
 \begin{frame}
-  \frametitle{Atualização das seções de choque}
-  \framesubtitle{Antes de atualizar, é preciso \textbf{gerá-las}}
-  Seções de choques para 2 grupos de nêutrons.\\
+  \frametitle{\textit{Slurm Workload Manager}}
+%  \framesubtitle{}
+  \textbullet Sistema de controle de tarefas (\textit{jobs}).\\
   \vspace{0.2cm}
-  Shit.\\
-  \vspace{0.2cm}
-  Utilização de um código específico: WIMSD-5B (\alert{restrito}).\\
+  \textbullet \alert{\textbf{Única}} forma de utilizar os recursos\footnote[frame]{Tecnicamente esta afirmativa não é verdadeira}.\\
   \vspace{0.2cm}
   \begin{itemize}
-  \item modelo de célula mantendo a razão $\frac{material\quad físsil}{moderador}$;
-  \item seções de choque geradas para 4 conjuntos de temperaturas;
-  \item cada conjunto com as temperaturas dos 3 materiais;
+    \item \texttt{sinfo}
+    \item \texttt{squeue}
+    \item \texttt{srun}
+    \item \texttt{sbatch}
+    \item texttt{cancel}
   \end{itemize}
-  \centering
-  \vspace{0.2cm}
-  \begin{tabular}{lrrrr}
-    \multicolumn{5}{c}{Temperaturas dos materiais}                                                                                                       \\ \hline
-    & \multicolumn{1}{l}{$T_1${[}K{]}} & \multicolumn{1}{l}{$T_2${[}K{]}} & \multicolumn{1}{l}{$T_3${[}K{]}} & \multicolumn{1}{l}{$T_4${[}K{]}}      \\ \hline
-    Combustível  & 300                             & 400                             & 500                             & 600                             \\ \hline
-    Revestimento & 300                             & 396                             & 403                             & 410                             \\ \hline
-    Refrigerante & 300                             & 308,5                           & 317                             & 341                            
-  \end{tabular}
+%  \centering
+%  \vspace{0.2cm}
+%  \begin{tabular}{lrrrr}
+%    \multicolumn{5}{c}{Temperaturas dos materiais}                                                                                                       \\ \hline
+%    & \multicolumn{1}{l}{$T_1${[}K{]}} & \multicolumn{1}{l}{$T_2${[}K{]}} & \multicolumn{1}{l}{$T_3${[}K{]}} & \multicolumn{1}{l}{$T_4${[}K{]}}      \\ \hline
+%    Combustível  & 300                             & 400                             & 500                             & 600                             \\ \hline
+%    Revestimento & 300                             & 396                             & 403                             & 410                             \\ \hline
+%    Refrigerante & 300                             & 308,5                           & 317                             & 341                            
+%  \end{tabular}
 \end{frame}
 
 %-------------------------------------------------
-\begin{frame}[allowframebreaks]
+\begin{frame}
  \vfill
   \begin{beamercolorbox}[center]{title}
      \Huge{Muito obrigado!}
